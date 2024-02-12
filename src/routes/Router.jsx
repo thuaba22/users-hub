@@ -3,6 +3,8 @@ import Main from "../layouts/Main";
 import Users from "../pages/Users/Users";
 import AddUser from "../pages/AddUser/AddUser";
 import UserDetails from "../pages/UserDetails/UserDetails";
+import Register from "../pages/Register/Register";
+import Login from "../pages/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
         element: <UserDetails></UserDetails>,
         loader: ({ params }) =>
           fetch(` https://dummyjson.com/users/${params.id}`),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },

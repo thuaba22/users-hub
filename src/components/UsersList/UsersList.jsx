@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Select from "react-select";
+import UserForm from "../AddUserForm/AddUserForm";
 
 const UsersList = () => {
   const [usersList, setUsersList] = useState([]);
@@ -12,7 +13,9 @@ const UsersList = () => {
       .then((res) => res.json())
       .then((data) => setUsersList(data.users));
   }, []);
-
+  const handleAddUser = (newUser) => {
+    setUsersList((prevUsers) => [...prevUsers, newUser]);
+  };
   const filteredAndSortedUsers = useMemo(() => {
     let filteredUsers = usersList;
 
@@ -76,7 +79,6 @@ const UsersList = () => {
             />
           </div>
         </div>
-
         <div className="grid w-full mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredAndSortedUsers.map((user) => (
             <div key={user.id} className="bg-white p-6 rounded-lg shadow-md">
@@ -98,6 +100,9 @@ const UsersList = () => {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-20">
+          <UserForm onAddUser={handleAddUser} />
         </div>
       </div>
     </section>
