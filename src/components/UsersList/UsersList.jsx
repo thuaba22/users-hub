@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const UsersList = () => {
   const [usersList, setUsersList] = useState([]);
@@ -21,9 +22,11 @@ const UsersList = () => {
                 src={user.image}
                 className="mb-4 w-[50%] mx-auto object-cover rounded-full"
               />
-              <h3 className="text-xl font-semibold text-center mb-2">
-                {user.firstName} {user.lastName}
-              </h3>
+              <Link to={`/user-details/${user.id}`}>
+                <h3 className="text-xl font-semibold text-center mb-2">
+                  {user.firstName} {user.lastName}
+                </h3>
+              </Link>
               <p className="text-blue-600 text-center">{user.email}</p>
               <p className="text-center text-gray-500 text-[12px]">
                 {user.address.address}, {user.address.city}
