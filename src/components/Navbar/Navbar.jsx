@@ -66,13 +66,13 @@ const Navbar = () => {
         {user ? (
           <button
             onClick={handleSignOut}
-            className="btn capitalize bg-[#1967d2] text-white hover:bg-[#1967d2]"
+            className="btn capitalize bg-[#5F33E1] text-white hover:bg-[#5F33E1]"
           >
             Sign Out
           </button>
         ) : (
           <Link to="/login">
-            <button className="btn capitalize ml-2 bg-[#1967d2] text-white hover:bg-[#1967d2]">
+            <button className="btn capitalize ml-2 bg-[#5F33E1] text-white hover:bg-[#5F33E1]">
               Login
             </button>
           </Link>

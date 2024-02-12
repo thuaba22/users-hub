@@ -59,7 +59,7 @@ const Login = () => {
           <div className="card  md:w-[500px] border bg-base-100">
             <div className="card-body">
               <form onSubmit={handleLogin}>
-                <h1 className="md:text-3xl text-[#1967d2] text-center font-bold">
+                <h1 className="md:text-3xl text-[#5F33E1] text-center font-bold">
                   Login
                 </h1>
                 <div className="form-control">
@@ -91,9 +91,9 @@ const Login = () => {
                       onClick={() => setShowPassword(!showPassword)}
                     >
                       {showPassword ? (
-                        <FaEyeSlash className="text-[#1967d2]"></FaEyeSlash>
+                        <FaEyeSlash className="text-[#5F33E1]"></FaEyeSlash>
                       ) : (
-                        <FaEye className="text-[#1967d2]"></FaEye>
+                        <FaEye className="text-[#5F33E1]"></FaEye>
                       )}
                     </span>
                   </div>
@@ -105,14 +105,14 @@ const Login = () => {
                   </label>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn bg-[#1967d2] hover:bg-[#1967d2] text-white mb-1">
+                  <button className="btn bg-[#5F33E1] hover:bg-[#5F33E1] text-white mb-1">
                     Login
                   </button>
-                  {loginError && <p className="text-[#1967d2]">{loginError}</p>}
+                  {loginError && <p className="text-[#5F33E1]">{loginError}</p>}
                   <p className="block mb-5 text-center text-base font-normal leading-relaxed text-gray-700 antialiased">
                     Don&#39;t have an account? Please{" "}
                     <Link
-                      className="font-medium text-black transition-colors hover:text-[#1967d2]"
+                      className="font-medium text-black transition-colors hover:text-[#5F33E1]"
                       to="/register"
                     >
                       Register
@@ -124,7 +124,7 @@ const Login = () => {
               <div className="mt-5">
                 <button
                   onClick={handleGoogle}
-                  className="btn bg-[#1967d2] hover:bg-[#1967d2] text-white w-full"
+                  className="btn bg-[#5F33E1] hover:bg-[#5F33E1] text-white w-full"
                 >
                   <FaGoogle className="text-3xl"></FaGoogle>
                 </button>

@@ -60,7 +60,7 @@ const Register = () => {
           </div>
           <div className="card  md:w-[500px] border bg-base-100">
             <form ref={formRef} onSubmit={handleRegister} className="card-body">
-              <h1 className="text-3xl text-[#1967d2] font-bold">Sign Up</h1>
+              <h1 className="text-3xl text-[#5F33E1] font-bold">Sign Up</h1>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -151,7 +151,7 @@ const Register = () => {
                     <p className="flex items-center font-sans text-sm font-normal leading-normal text-gray-700 antialiased">
                       I agree the
                       <a
-                        className="font-medium transition-colors hover:text-[#1967d2]"
+                        className="font-medium transition-colors hover:text-[#5F33E1]"
                         href="#"
                       >
                         &nbsp;Terms and Conditions
@@ -160,17 +160,17 @@ const Register = () => {
                   </label>
                 </div>
                 {registerError && (
-                  <p className="text-[#1967d2]">{registerError}</p>
+                  <p className="text-[#5F33E1]">{registerError}</p>
                 )}
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-[#1967d2] hover:bg-[#1967d2] text-white">
+                <button className="btn bg-[#5F33E1] hover:bg-[#5F33E1] text-white">
                   Register
                 </button>
                 <p className="mt-4 block text-center text-base font-normal leading-relaxed text-gray-700 antialiased">
                   Already have an account?
                   <Link
-                    className="font-medium text-black transition-colors hover:text-[#1967d2]"
+                    className="font-medium text-black transition-colors hover:text-[#5F33E1]"
                     to="/login"
                   >
                     Log In
